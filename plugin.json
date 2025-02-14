@@ -2,6 +2,7 @@
     "id": "execute_python",
     "uuid": "80cc6038-dce4-41d6-9e6f-72d671c1879f",
     "emoji": "🧩",
+    "version": 1,
     "title": "Python Interpreter",
     "openaiSpec": {
         "name": "execute_python",

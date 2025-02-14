@@ -1,0 +1,37 @@
+{
+    "id": "execute_python",
+    "uuid": "80cc6038-dce4-41d6-9e6f-72d671c1879f",
+    "emoji": "🧩",
+    "title": "Python Interpreter",
+    "openaiSpec": {
+        "name": "execute_python",
+        "parameters": {
+            "type": "object",
+            "required": [
+                "code",
+                "packages"
+            ],
+            "properties": {
+                "code": {
+                    "type": "string",
+                    "description": "A valid Python code snippet to be executed in the Pyodide Python WASM runtime. Best practices:\n- Prefer single-line or concise multi-line code\n- Use simple, direct print statements\n- Avoid complex formatting or multiple descriptive prints\n- Prefer direct value printing\n- For multi-line code, use triple quotes to preserve newline characters\n\nExample of recommended usage:\n```\nimport numpy as np\nprint(np.array([1, 2, 3]))\n```\n\nNote: First executions in a session may require a brief warmup."
+                },
+                "packages": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of Python packages to load before executing the code. Only include packages that are necessary for the specific calculation."
+                }
+            }
+        },
+        "description": "Execute a Python code snippet in a secure browser-based Python runtime (Pyodide). Limitations:\n- Supports up to 6-7 print statements per execution\n- First execution may have a warmup delay\n- Prefers simple, direct code snippets\n\nProvide the list of packages needed in the `packages` parameter. Recommended to use simple print statements and avoid complex output formatting."
+    },
+    "outputType": "respond_to_ai",
+    "userSettings": null,
+    "overviewMarkdown": "Allows the AI assistant to run Python snippets in your browser using Pyodide's python WASM runtime.",
+    "authenticationType": "AUTH_TYPE_NONE",
+    "implementationType": "javascript",
+    "iconURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/.PY_file_recreation.png/500px-.PY_file_recreation.png",
+    "dynamicContextEndpoints": []
+}
